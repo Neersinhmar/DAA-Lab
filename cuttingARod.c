@@ -6,13 +6,28 @@ typedef struct store
     int *ptr;
 } store;
 
+int max(int arr[],int n){
+    int max=arr[0];
+    for(int i=1;i<n;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    return max;
+}
+
 int MaxPrice(int length,int price[]){
    store *data=uArr(length);
    int priceArr[length];
    for(int i=0;i<length;i++){
-      int temp;
-     for(int i=0;i<data[i].ptr)
+      int temp_sum=0;
+      int n=length/(i+1)!=0?length/(i+1)+1:length/(i+1);
+     for(int j=0;j<n;j++){
+        temp_sum+=data[i].ptr[j];
+     }
+     priceArr[i]=temp_sum;
    }
+   return max;
 }
 
 store *uArr(int num)
