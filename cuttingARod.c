@@ -6,6 +6,8 @@ typedef struct store
     int *ptr;
 } store;
 
+store *uArr(int );
+
 int max(int arr[],int n){
     int max=arr[0];
     for(int i=1;i<n;i++){
@@ -27,7 +29,8 @@ int MaxPrice(int length,int price[]){
      }
      priceArr[i]=temp_sum;
    }
-   return max;
+   int maxPrice=max(priceArr,length);
+   return maxPrice;
 }
 
 store *uArr(int num)
