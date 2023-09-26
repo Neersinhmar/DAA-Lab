@@ -25,13 +25,16 @@ int MaxPrice(int length,int price[]){
       int temp_sum=0;
       int n=length/(i+1)!=0?length/(i+1)+1:length/(i+1);
      for(int j=0;j<n;j++){
-        temp_sum+=data[i].ptr[j];
+        printf("%d",data[i].ptr[j]);
+        // temp_sum+=price[data[i].ptr[j]];
      }
-     priceArr[i]=temp_sum;
+     printf("\n");
+    //  priceArr[i]=temp_sum;
    }
    int maxPrice=max(priceArr,length);
    return maxPrice;
 }
+
 
 store *uArr(int num)
 {
@@ -46,11 +49,11 @@ store *uArr(int num)
         {
             if (r / i != 0 && r != i)
             {
-                data[i].ptr[k++] = i;
+                data[i-1].ptr[k++] = i;
             }
             else
             {
-                data[i].ptr[k++] = r;
+                data[i-1].ptr[k++] = r;
             }
             r -= i;
         }
